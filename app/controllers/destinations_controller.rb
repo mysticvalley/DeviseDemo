@@ -1,4 +1,6 @@
 class DestinationsController < ApplicationController
+	before_filter :authenticate_user!, :only => [:new, :edit, :update, :destroy]
+
   # GET /destinations
   # GET /destinations.json
   def index
