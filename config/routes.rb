@@ -1,7 +1,13 @@
 Tour::Application.routes.draw do
+  devise_for :users
+
+  get "home/show"
+
   resources :destinations do
 		resources :reviews
 	end
+
+	root :to => "home#show"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
