@@ -1,7 +1,7 @@
 class ReviewsController < ApplicationController
 	
 	before_filter :find_destination
-	#before_filter :authenticate_user!
+  before_filter :authenticate_user!
 	
 	# POST /destinations/:destination_id/reviews
 	def create
